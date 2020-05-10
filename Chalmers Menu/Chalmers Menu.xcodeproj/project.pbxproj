@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		558AF1A22450D5C100705228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558AF1A12450D5C100705228 /* AppDelegate.swift */; };
-		558AF1A42450D5C100705228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558AF1A32450D5C100705228 /* SceneDelegate.swift */; };
 		558AF1A62450D5C100705228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558AF1A52450D5C100705228 /* ViewController.swift */; };
 		558AF1A92450D5C100705228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558AF1A72450D5C100705228 /* Main.storyboard */; };
 		558AF1AB2450D5C100705228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558AF1AA2450D5C100705228 /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		558AF19E2450D5C100705228 /* Chalmers Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chalmers Menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558AF1A12450D5C100705228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		558AF1A32450D5C100705228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		558AF1A52450D5C100705228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		558AF1A82450D5C100705228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		558AF1AA2450D5C100705228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +56,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550F19A72468334E003FE6FB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				558AF1A72450D5C100705228 /* Main.storyboard */,
+				558AF1AC2450D5C100705228 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		550F19A82468337B003FE6FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		550F19A92468338C003FE6FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				558AF1A52450D5C100705228 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		558AF1952450D5C100705228 = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +101,11 @@
 		558AF1A02450D5C100705228 /* Chalmers Menu */ = {
 			isa = PBXGroup;
 			children = (
+				550F19A92468338C003FE6FB /* Controller */,
+				550F19A82468337B003FE6FB /* Model */,
+				550F19A72468334E003FE6FB /* UI */,
 				558AF1A12450D5C100705228 /* AppDelegate.swift */,
-				558AF1A32450D5C100705228 /* SceneDelegate.swift */,
-				558AF1A52450D5C100705228 /* ViewController.swift */,
-				558AF1A72450D5C100705228 /* Main.storyboard */,
 				558AF1AA2450D5C100705228 /* Assets.xcassets */,
-				558AF1AC2450D5C100705228 /* LaunchScreen.storyboard */,
 				558AF1AF2450D5C100705228 /* Info.plist */,
 			);
 			path = "Chalmers Menu";
@@ -202,7 +223,6 @@
 			files = (
 				558AF1A62450D5C100705228 /* ViewController.swift in Sources */,
 				558AF1A22450D5C100705228 /* AppDelegate.swift in Sources */,
-				558AF1A42450D5C100705228 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
