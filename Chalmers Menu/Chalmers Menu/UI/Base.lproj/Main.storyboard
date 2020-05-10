@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Menu-->
         <scene sceneID="NMc-xH-vpO">
             <objects>
                 <tableViewController id="gjX-OL-4Ej" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                             <outlet property="delegate" destination="gjX-OL-4Ej" id="Bfy-ic-Vco"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" largeTitleDisplayMode="always" id="TRe-8e-L3S"/>
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="TRe-8e-L3S"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMO-mH-aew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
