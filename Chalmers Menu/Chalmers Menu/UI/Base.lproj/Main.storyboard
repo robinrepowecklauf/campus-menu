@@ -6,22 +6,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu-->
+        <!--Meny-->
         <scene sceneID="NMc-xH-vpO">
             <objects>
-                <tableViewController id="gjX-OL-4Ej" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="i4a-Ge-n81">
+                <tableViewController id="gjX-OL-4Ej" customClass="DailyMenuTableViewController" customModule="Chalmers_Menu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="147" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="i4a-Ge-n81">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="d8N-UU-OEx">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dailyMenuCell" rowHeight="147" id="d8N-UU-OEx" customClass="DailyMenuTableViewCell" customModule="Chalmers_Menu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="147"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d8N-UU-OEx" id="ojv-QZ-CCf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxV-m5-Fsy">
+                                            <rect key="frame" x="20" y="11" width="374" height="125"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bae" translatesAutoresizingMaskIntoConstraints="NO" id="WPE-9G-lmI">
+                                                    <rect key="frame" x="8" y="0.0" width="82" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kårrestaurangen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCY-91-O6h">
+                                                    <rect key="frame" x="106" y="13" width="189" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QxV-m5-Fsy" firstAttribute="bottom" secondItem="ojv-QZ-CCf" secondAttribute="bottomMargin" id="1yp-kw-xd3"/>
+                                        <constraint firstItem="QxV-m5-Fsy" firstAttribute="top" secondItem="ojv-QZ-CCf" secondAttribute="topMargin" id="HzE-C1-8yT"/>
+                                        <constraint firstItem="QxV-m5-Fsy" firstAttribute="leading" secondItem="ojv-QZ-CCf" secondAttribute="leadingMargin" id="qFO-wo-Uwm"/>
+                                        <constraint firstItem="QxV-m5-Fsy" firstAttribute="trailing" secondItem="ojv-QZ-CCf" secondAttribute="trailingMargin" id="wpv-F5-pQF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="restaurantLogoImageView" destination="WPE-9G-lmI" id="OE5-Hh-d3p"/>
+                                    <outlet property="restaurantNameLabel" destination="TCY-91-O6h" id="aMX-NW-Dnn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,16 +59,16 @@
                             <outlet property="delegate" destination="gjX-OL-4Ej" id="Bfy-ic-Vco"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="always" id="TRe-8e-L3S"/>
+                    <navigationItem key="navigationItem" title="Meny" largeTitleDisplayMode="always" id="TRe-8e-L3S"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMO-mH-aew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="92"/>
+            <point key="canvasLocation" x="750.72463768115949" y="91.741071428571431"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--View Controller-->
         <scene sceneID="MM8-hx-8Gx">
             <objects>
-                <navigationController id="qqH-Ss-fi7" sceneMemberID="viewController">
+                <navigationController id="qqH-Ss-fi7" customClass="ViewController" customModule="Chalmers_Menu" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hhT-ao-FMY">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,4 +82,7 @@
             <point key="canvasLocation" x="-30" y="92"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bae" width="194" height="146"/>
+    </resources>
 </document>

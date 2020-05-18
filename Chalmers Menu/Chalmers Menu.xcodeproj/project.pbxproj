@@ -14,6 +14,8 @@
 		558AF1AB2450D5C100705228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558AF1AA2450D5C100705228 /* Assets.xcassets */; };
 		558AF1AE2450D5C100705228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558AF1AC2450D5C100705228 /* LaunchScreen.storyboard */; };
 		558AF1B92450D5C200705228 /* Chalmers_MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558AF1B82450D5C200705228 /* Chalmers_MenuTests.swift */; };
+		55B790C824730C6C006D2A17 /* DailyMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B790C724730C6C006D2A17 /* DailyMenuTableViewCell.swift */; };
+		55B790CA247311D9006D2A17 /* DailyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B790C9247311D9006D2A17 /* DailyMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		558AF1B42450D5C200705228 /* Chalmers MenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chalmers MenuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		558AF1B82450D5C200705228 /* Chalmers_MenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chalmers_MenuTests.swift; sourceTree = "<group>"; };
 		558AF1BA2450D5C200705228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B790C724730C6C006D2A17 /* DailyMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMenuTableViewCell.swift; sourceTree = "<group>"; };
+		55B790C9247311D9006D2A17 /* DailyMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		550F19A72468334E003FE6FB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				55B790C624730C3A006D2A17 /* Cells */,
 				558AF1A72450D5C100705228 /* Main.storyboard */,
 				558AF1AC2450D5C100705228 /* LaunchScreen.storyboard */,
 			);
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				558AF1A52450D5C100705228 /* ViewController.swift */,
+				55B790C9247311D9006D2A17 /* DailyMenuTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +127,14 @@
 				558AF1BA2450D5C200705228 /* Info.plist */,
 			);
 			path = "Chalmers MenuTests";
+			sourceTree = "<group>";
+		};
+		55B790C624730C3A006D2A17 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				55B790C724730C6C006D2A17 /* DailyMenuTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B790CA247311D9006D2A17 /* DailyMenuTableViewController.swift in Sources */,
 				558AF1A62450D5C100705228 /* ViewController.swift in Sources */,
 				558AF1A22450D5C100705228 /* AppDelegate.swift in Sources */,
+				55B790C824730C6C006D2A17 /* DailyMenuTableViewCell.swift in Sources */,
 				5542BDAF24683DB8003021EF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ED723KE7L;
 				INFOPLIST_FILE = "Chalmers Menu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,7 +413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "danielkarlkvist.Chalmers-Menu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -407,6 +424,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ED723KE7L;
 				INFOPLIST_FILE = "Chalmers Menu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,7 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "danielkarlkvist.Chalmers-Menu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
